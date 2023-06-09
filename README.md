@@ -32,16 +32,19 @@ Bir adım öne çıkayım derseniz:
 kayıt oluşturabilsin ilişkilendirebilsin fakat silemesin. Yönetici tüm
 eylemleri gerçekleştirebilsin.
 
+## Swagger : localhost:8080/swagger-ui.html
+
 # Bu uygulama ile neler yapılabilir ?
-Uygulamayı kullanarak laborant, patient, report oluşturabilirsiniz. Report oluştururken 
-{
-  "photoUrl": "string",
-  "fileNumber": 0,
-  "diseaseName": "string",
-  "diseaseDetails": "string",
-  "lobarantId": 0,
-  "patientId": 0
-} hasta adını ve soy adını relationship yaparak patient içerisinden alır. 
+Uygulamayı kullanarak laborant, patient, report oluşturabilirsiniz. Report oluştururken hasta adını ve soy adını relationship kurarak patient içerisinden alır. 
+
+    {
+    "photoUrl": "string",
+    "fileNumber": 0,
+    "diseaseName": "string",
+    "diseaseDetails": "string",
+    "lobarantId": 0,
+    "patientId": 0 
+    }
 
 # Relationships
 ### Report :
@@ -67,8 +70,12 @@ Uygulamayı kullanarak laborant, patient, report oluşturabilirsiniz. Report olu
     @OneToMany(mappedBy = "laborant")
     @JsonIgnore
     private List <Report> reports;
-  
-Controllers
+    
+# Unit-Test 
+Laborant, Patient, Report Managerleri üzerinde sadece Create için testler yapılmıştır.
+![image](https://github.com/cengarm/laboratoryApp/assets/126611512/ece5b2f7-7c21-4436-96e9-0a2263e86ec9)
+
+# Controllers
 ![image](https://github.com/cengarm/laboratoryApp/assets/126611512/6ca05f22-f732-4d6b-86f1-cc7d83352b11)
 
 # Hasta(patient) ekleme , silme , güncelleme , id'ye göre hastayı listeleme , tüm hastaları listeleme.
@@ -104,6 +111,12 @@ Controllers
 'http://localhost:8080/api/laborant/getAll' ( tüm laborantları listeleme.)
 ![image](https://github.com/cengarm/laboratoryApp/assets/126611512/b8bb03ad-029c-4a2b-8a0e-43da67fef67f)
 
-
+### Ek olarak: Uygulama geliştirilirken ModelMapper kullanılmıştır.
+            
+     <dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.1.1</version>
+		</dependency>
 
 
