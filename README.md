@@ -32,7 +32,7 @@ Bir adım öne çıkayım derseniz:
 kayıt oluşturabilsin ilişkilendirebilsin fakat silemesin. Yönetici tüm
 eylemleri gerçekleştirebilsin.
 
-## Swagger : localhost:8080/swagger-ui.html
+## Swagger : http://localhost:8080/swagger-ui.html
 
 # Bu uygulama ile neler yapılabilir ?
 Uygulamayı kullanarak laborant, patient, report oluşturabilirsiniz. Report oluştururken hasta adını ve soy adını relationship kurarak patient içerisinden alır. 
