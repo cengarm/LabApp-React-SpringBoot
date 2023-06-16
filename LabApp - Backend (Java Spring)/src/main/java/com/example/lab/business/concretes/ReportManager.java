@@ -6,12 +6,14 @@ import com.example.lab.core.utilities.exceptions.BusinessException;
 import com.example.lab.core.utilities.mapping.ModelMapperService;
 import com.example.lab.core.utilities.messages.BusinessMessages;
 import com.example.lab.core.utilities.results.*;
+import com.example.lab.dataAccess.LaborantRepository;
 import com.example.lab.dataAccess.ReportRepository;
 import com.example.lab.dtos.requests.reportRequests.CreateReportRequest;
 import com.example.lab.dtos.requests.reportRequests.UpdateReportRequest;
 import com.example.lab.dtos.responses.GetByIdReportResponse;
 import com.example.lab.dtos.responses.ReportListResponse;
-import com.example.lab.entity.concretes.Report;
+import com.example.lab.entity.Report;
+
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -25,12 +27,22 @@ public class ReportManager implements ReportService {
 
     private final ModelMapperService modelMapperService;
     private final ReportRepository reportRepository;
+    private final LaborantRepository laborantRepository;
 
     @Override
     public Result add(CreateReportRequest createReportRequest)throws BusinessException {
         try {
             Report report = this.modelMapperService.forRequest().map(createReportRequest,Report.class);
-            this.reportRepository.save(report);
+
+//            Report report = ReportMapper.conversionDtoToModel(createReportRequest);
+
+
+//            Laborant laborant = new Laborant();
+//            laborant = laborantRepository.findById(createReportRequest.getLobrant())
+//                    .orElseThrow(()->new Exception("Böyle bir laborant yok."));
+//                     report.setLaborant(laborant);
+
+            report = this.reportRepository.save(report);
             log.info(BusinessMessages.LogMessages.ADD_OPERATINON_WORK + "ReportManager -> Add Operation");
             return new SuccessResult(BusinessMessages.GlobalMessages.DATA_ADDED_SUCCESSFULLY);
         } catch (Exception exception) {
@@ -55,10 +67,10 @@ public class ReportManager implements ReportService {
     }
 
     @Override
-    public Result delete(Long reportId) {
+    public Result delete(Long id) {
         try {
-        this.reportRepository.deleteById(reportId);
-        log.info(BusinessMessages.LogMessages.DELETE_FROM_DATABASE + "LaborantManager -> Delete Operation");
+        this.reportRepository.deleteById(id);
+        log.info(BusinessMessages.LogMessages.DELETE_FROM_DATABASE + " Report Manager -> Delete Operation");
         return new SuccessResult(BusinessMessages.GlobalMessages.DATA_DELETED_SUCCESSFULLY);
         }catch(Exception exception){
             log.warn(BusinessMessages.LogMessages.DELETE_OPERATINON_NOT_WORK);

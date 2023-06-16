@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 public class ReportListResponse {
 
     private String firstName;
-    private String lastName;
+    private String patientLastName;
     private Long reportId;
     private Long fileNumber;
     private Long identificationNumber;
@@ -22,5 +22,9 @@ public class ReportListResponse {
     private String diseaseDetails;
     private String photoUrl;
     private LocalDateTime reportDate;
+    private String laborantHospitalId;
+    private String laborantFirstName;
+    private String laborantLastName;
+
 
 }

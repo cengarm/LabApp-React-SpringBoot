@@ -15,30 +15,30 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/report")
+@RequestMapping("/api/v1/")
 @AllArgsConstructor
 public class ReportController {
     private final ReportService reportService;
 
 
-    @PostMapping("/add")
+    @PostMapping("/reports")
     @ResponseStatus(code = HttpStatus.CREATED)
     public Result add(@RequestBody CreateReportRequest createReportRequest) throws BusinessException {
         return this.reportService.add(createReportRequest);
     }
-    @PutMapping("/update")
+    @PutMapping("/reports")
     public Result update(@RequestBody UpdateReportRequest updateReportRequest) throws BusinessException {
          return this.reportService.update(updateReportRequest);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/reports/{id}")
     public Result delete(@PathVariable Long id) throws BusinessException {
        return this.reportService.delete(id);
     }
-    @GetMapping("/getAll")
+    @GetMapping("/reports")
     public DataResult<List<ReportListResponse>> getAll() throws BusinessException {
         return this.reportService.getAll();
     }
-    @GetMapping("/{id}")
+    @GetMapping("/reports/{id}")
     public DataResult<GetByIdReportResponse> getById(Long id) throws BusinessException {
         return this.reportService.getById(id);
     }

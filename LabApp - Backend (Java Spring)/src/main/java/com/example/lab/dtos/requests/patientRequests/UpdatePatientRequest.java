@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.Length;
 public class UpdatePatientRequest {
     @NotNull
     @Length(min = 11 , max = 11)
-    private Long identificationNumber;
+    private  String identificationNumber;
     @NotNull
     private String name;
     @NotNull

@@ -16,14 +16,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class UpdateReportRequest {
 
-
+    private Long id;
     private Long fileNumber;
-
     private String diseaseName;
     private String diseaseDetails;
     public String photoUrl;
-    private Long lobarantId;
-    private Long patientId;
     @JsonIgnore
     @CreationTimestamp
     private LocalDateTime reportDate;

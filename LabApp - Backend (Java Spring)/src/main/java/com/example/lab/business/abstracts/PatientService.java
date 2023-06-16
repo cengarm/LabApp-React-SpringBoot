@@ -10,13 +10,12 @@ import com.example.lab.dtos.responses.PatientListResponse;
 
 import java.util.List;
 
-    public interface PatientService {
+public interface PatientService {
 
         Result add (CreatePatientRequest createPatientRequest) throws BusinessException;
         Result update (UpdatePatientRequest updatePatientRequest) throws BusinessException;
         Result delete (Long patientId) throws BusinessException;
         DataResult<List<PatientListResponse>> getAll() throws BusinessException;
         DataResult<GetByIdPatientResponse> getById(Long patientId) throws BusinessException;
-//
-    }
+}
 

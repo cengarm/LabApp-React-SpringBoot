@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -19,13 +20,13 @@ public class CreateReportRequest {
     @NotNull
     public String photoUrl;
     @NotNull
-    private Long fileNumber;
+    private String fileNumber;
     @NotNull
     private String diseaseName;
     @NotNull
     private String diseaseDetails;
     @NotNull
-    private Long lobarantId;
+    private Long lobrant;
     @NotNull
     private Long patientId;
     @JsonIgnore

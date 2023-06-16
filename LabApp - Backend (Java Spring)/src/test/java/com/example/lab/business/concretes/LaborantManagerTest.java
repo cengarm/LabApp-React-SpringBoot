@@ -45,7 +45,7 @@ public class LaborantManagerTest {
         CreateLaborantRequest createLaborantRequest = new CreateLaborantRequest();
         createLaborantRequest.setName("Kazım");
         createLaborantRequest.setLastName("Karabekir");
-        createLaborantRequest.setHospitalId(5555555L);
+        createLaborantRequest.setHospitalId("5555555");
 
         boolean result =laborantService.add(createLaborantRequest).isSuccess();
         Assert.assertEquals(true, result);

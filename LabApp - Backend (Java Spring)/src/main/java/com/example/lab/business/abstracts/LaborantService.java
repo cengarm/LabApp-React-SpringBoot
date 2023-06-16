@@ -7,13 +7,12 @@ import com.example.lab.dtos.requests.laborantRequests.CreateLaborantRequest;
 import com.example.lab.dtos.requests.laborantRequests.UpdateLaborantRequest;
 import com.example.lab.dtos.responses.GetByIdLaborantResponse;
 import com.example.lab.dtos.responses.LaborantListResponse;
-import com.example.lab.dtos.responses.ReportListResponse;
 
 import java.util.List;
 
 public interface LaborantService {
     Result add (CreateLaborantRequest createLaborantRequest) throws BusinessException;
-    Result update (UpdateLaborantRequest updateLaborantRequest) throws BusinessException;
+    Result update (Long id, UpdateLaborantRequest updateLaborantRequest) throws Exception;
     Result delete (Long id) throws BusinessException;
     DataResult<List<LaborantListResponse>> getAll() ;
     DataResult<GetByIdLaborantResponse> getById(Long laborantId);

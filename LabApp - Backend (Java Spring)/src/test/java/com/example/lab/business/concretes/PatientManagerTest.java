@@ -40,9 +40,9 @@ public class PatientManagerTest {
     public void whenGetByIdCalledWithValidRequest_itShouldReturnValidPatientResponse() throws BusinessException {
 
         CreatePatientRequest createPatientRequest = new CreatePatientRequest();
-        createPatientRequest.setName("Bekir");
+        createPatientRequest.setFirstName("Bekir");
         createPatientRequest.setLastName("Kazım");
-        createPatientRequest.setIdentificationNumber(123345152798L);
+        createPatientRequest.setIdentificationNumber("123345152798");
 
         boolean result = patientService.add(createPatientRequest).isSuccess();
 

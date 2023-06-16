@@ -10,11 +10,10 @@ import com.example.lab.dtos.requests.laborantRequests.CreateLaborantRequest;
 import com.example.lab.dtos.requests.laborantRequests.UpdateLaborantRequest;
 import com.example.lab.dtos.responses.GetByIdLaborantResponse;
 import com.example.lab.dtos.responses.LaborantListResponse;
-import com.example.lab.entity.concretes.Laborant;
+import com.example.lab.entity.Laborant;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,7 +22,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 @Slf4j
-//@CrossOrigin(origins = "http://localhost:3000") //for react
+
 public class LaborantManager implements LaborantService {
 
     private ModelMapperService modelMapperService;
@@ -45,9 +44,10 @@ public class LaborantManager implements LaborantService {
 
 
     @Override
-    public Result update(UpdateLaborantRequest updateLaborantRequest) throws BusinessException {
+    public Result update(Long id, UpdateLaborantRequest updateLaborantRequest) throws Exception {
         try {
-            Laborant laborant = this.modelMapperService.forRequest().map(updateLaborantRequest, Laborant.class);
+            Laborant laborant = modelMapperService.forRequest().map(updateLaborantRequest, Laborant.class);
+            laborant.setId(id);
             this.laborantRepository.save(laborant);
             log.info(BusinessMessages.LogMessages.UPDATE_OPERATINON_WORK + "LaborantManager -> Update Operation");
             return new SuccessResult(BusinessMessages.GlobalMessages.DATA_UPDATED_SUCCESSFULLY);
@@ -89,7 +89,6 @@ public class LaborantManager implements LaborantService {
            GetByIdLaborantResponse response = this.modelMapperService.forResponse().map(laborant, GetByIdLaborantResponse.class);
         return new SuccessDataResult<>(response, BusinessMessages.GlobalMessages.DATA_LISTED_SUCCESSFULLY);
     }
-
 
 
 }

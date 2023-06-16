@@ -10,7 +10,7 @@ import com.example.lab.dtos.requests.patientRequests.CreatePatientRequest;
 import com.example.lab.dtos.requests.patientRequests.UpdatePatientRequest;
 import com.example.lab.dtos.responses.GetByIdPatientResponse;
 import com.example.lab.dtos.responses.PatientListResponse;
-import com.example.lab.entity.concretes.Patient;
+import com.example.lab.entity.Patient;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -26,13 +26,19 @@ public class PatientManager implements PatientService {
     private final PatientRepository patientRepository;
 
 
+    // GlobalExceptionHandler. ->
+    // Servisindeki metodlar, diğer paketlerden de çağırılabilir olması gerekir.
+    // DTO çevrimlerini, front'a sunarken sadece controller üzerinde çevir.
+
 
     @Override
-    public Result add(CreatePatientRequest createPatientRequest)throws BusinessException {
+    public Result add(
+            CreatePatientRequest createPatientRequest
+    )throws BusinessException {
         try {
             Patient patient = this.modelMapperService.forRequest().map(createPatientRequest, Patient.class);
-            this.patientRepository.save(patient);
-            return new SuccessResult(BusinessMessages.GlobalMessages.DATA_UPDATED_SUCCESSFULLY);
+            patient = this.patientRepository.save(patient);
+            return new SuccessResult(BusinessMessages.GlobalMessages.DATA_CREATED_SUCCESSFULY);
 
         } catch (Exception exception) {
             log.warn(BusinessMessages.LogMessages.ADD_OPERATINON_NOT_WORK);
