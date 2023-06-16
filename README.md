@@ -9,7 +9,7 @@ Tech:
 - React
 - PostgreSQL
 
-Frontend: https://github.com/cengarm/LabApp-React-SpringBoot/tree/main/LabApp%20-Frontend%20(React)
+Frontend: https://github.com/cengarm/LabApp-React-SpringBoot/blob/main/LabApp%20-Frontend%20(React)/README.md
 
 Database:
 
