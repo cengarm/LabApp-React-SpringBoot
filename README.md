@@ -21,7 +21,7 @@ For Database:
 
 ## Installation
 1-Clone this repo 
-
+```sh
 git clone https://github.com/cengarm/LabApp.git
 ```
 2-Then navigate to the path where the easylab project is located in the Terminal
