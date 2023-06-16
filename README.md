@@ -49,7 +49,7 @@ java -jar lab-0.0.1-SNAPSHOT.jar
 This a laboratory programming application.
 This application has been developed using Java Spring as it is requested in the internship application.
 
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/68319d6b-e960-4d10-abcb-47fa8f34ae20)
+![image](https://github.com/cengarm/LabApp-React-SpringBoot/assets/126611512/7a7d9e02-3325-47df-8fbe-1ddc9d843bf6)
 
 
 # Internship program request:
