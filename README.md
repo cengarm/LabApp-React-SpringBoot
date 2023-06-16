@@ -25,7 +25,7 @@ For Database:
 git clone https://github.com/cengarm/LabApp.git
 ```
 2-Then navigate to the path where the easylab project is located in the Terminal
-
+```sh
 cd lab-app
 ```
 3-Create Jar file for the project
@@ -41,5 +41,5 @@ cd target
 
 5-Run Jar project file
 ```sh
-java -jar easylab-0.0.1-SNAPSHOT.jar
+java -jar labapp-0.0.1-SNAPSHOT.jar
 ```
