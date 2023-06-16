@@ -124,40 +124,4 @@ Database olarak postgreSQL kullandım.
     
 # Unit-Test 
 Laborant, Patient, Report Managerleri üzerinde sadece Create için testler yapılmıştır.
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/ece5b2f7-7c21-4436-96e9-0a2263e86ec9)
 
-# Controllers
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/6ca05f22-f732-4d6b-86f1-cc7d83352b11)
-
-# Hasta(patient) ekleme , silme , güncelleme , id'ye göre hastayı listeleme , tüm hastaları listeleme.
-'http://localhost:8080/api/patient/add' (patient ekleme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/db80afab-5e7b-4c54-87df-1441fa7191c6)
-
-'http://localhost:8080/api/patient/update' (patient güncelleme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/6b7c2eb7-e380-47da-862d-aa95bcf7f973)
-
-'http://localhost:8080/api/laborant/5' (id'ye göre patient silme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/344324bc-ec09-417e-b93d-6e0eb4849ce6)
-
-'http://localhost:8080/api/patient/1' (id'ye göre laborant listeleme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/fa5bd086-16ee-4669-af85-6099ce40cffa)
-
-'http://localhost:8080/api/laborant/getAll' (tüm patientleri listeleme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/aba02445-8c6d-4ea1-a974-025119dff256)
-
-
-# Laborant ekleme, silme, güncelleme, id'ye göre laborant listeleme , tüm laborantları listeleme.
-'http://localhost:8080/api/laborant/add (laborant ekleme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/45230a74-af0f-4652-9138-472eb86cbb89)
-
- 'http://localhost:8080/api/laborant/update' (laborant güncelleme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/03ee7ae6-c672-41d1-a639-11e6445d72ed)
-
-'http://localhost:8080/api/laborant/1' (id'ye göre laborant silme)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/16fb4c05-3401-450c-a3e7-7ffb7ec63d47)
-
-'http://localhost:8080/api/laborant/{id}?id=1' ( id'ye göre laborant listeleme.)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/3a10993b-8c66-479e-8862-d14d5f687cb3)
-
-'http://localhost:8080/api/laborant/getAll' ( tüm laborantları listeleme.)
-![image](https://github.com/cengarm/laboratoryApp/assets/126611512/b8bb03ad-029c-4a2b-8a0e-43da67fef67f)
