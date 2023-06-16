@@ -10,13 +10,14 @@ Tech:
 - PostgreSQL
 
 For Database:
-spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.hibernate.show-sql=true
-spring.datasource.url=jdbc:postgresql://localhost:5432/Lab   ==> Dont forget change
-spring.datasource.username=postgres
-spring.datasource.password=123456   ==> Dont forget change
-spring.jpa.properties.javax.persistence.validation.mode = none
+
+        spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
+        spring.jpa.hibernate.ddl-auto=update
+        spring.jpa.hibernate.show-sql=true
+        spring.datasource.url=jdbc:postgresql://localhost:5432/Lab   ==> Dont forget change
+        spring.datasource.username=postgres
+        spring.datasource.password=123456   ==> Dont forget change
+        spring.jpa.properties.javax.persistence.validation.mode = none
 
 ## Installation
 1-Clone this repo 
