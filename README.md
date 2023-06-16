@@ -8,8 +8,10 @@ Tech:
 - Java 
 - React
 - PostgreSQL
-For Frontend: https://github.com/cengarm/LabApp-React-SpringBoot/tree/main/LabApp%20-Frontend%20(React)
-For Database:
+
+Frontend: https://github.com/cengarm/LabApp-React-SpringBoot/tree/main/LabApp%20-Frontend%20(React)
+
+Database:
 
         spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
         spring.jpa.hibernate.ddl-auto=update
