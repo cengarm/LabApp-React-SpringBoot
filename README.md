@@ -26,7 +26,7 @@ git clone https://github.com/cengarm/LabApp.git
 ```
 2-Then navigate to the path where the easylab project is located in the Terminal
 ```sh
-cd lab-app
+cd labapp
 ```
 3-Create Jar file for the project
 ```sh
