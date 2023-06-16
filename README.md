@@ -41,7 +41,7 @@ cd target
 
 5-Run Jar project file
 ```sh
-java -jar labapp-0.0.1-SNAPSHOT.jar
+java -jar lab-0.0.1-SNAPSHOT.jar
 ```
 
 This a laboratory programming application.
