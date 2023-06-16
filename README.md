@@ -1,5 +1,5 @@
 # LabApp
-
+This a laboratory programming application.
 # Project Installation and Running 
 
 ## Requirements:
