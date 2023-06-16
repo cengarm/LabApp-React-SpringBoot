@@ -43,7 +43,7 @@ cd target
 ```sh
 java -jar labapp-0.0.1-SNAPSHOT.jar
 ```
-# laboratoryApp
+
 This a laboratory programming application.
 This application has been developed using Java Spring as it is requested in the internship application.
 
