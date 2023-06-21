@@ -1,5 +1,0 @@
-# Created at 2023-06-16T12:20:10.252
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Lab-App\LabApp - Backend (Java Spring)\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-
