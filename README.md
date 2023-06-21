@@ -1,6 +1,8 @@
 # LabApp
 This a laboratory programming application.
 # Project Installation and Running 
+![image](https://github.com/cengarm/LabApp-React-SpringBoot/assets/126611512/48465037-527f-42c5-9603-d84f119dff13)
+
 
 ## Requirements:
 Tech:
