@@ -1,6 +1,6 @@
 # LabApp
 This a laboratory programming application.
-# Project Installation and Running 
+
 ![image](https://github.com/cengarm/LabApp-React-SpringBoot/assets/126611512/48465037-527f-42c5-9603-d84f119dff13)
 
 
@@ -13,6 +13,7 @@ Tech:
 
 # [Frontend readme](https://github.com/cengarm/LabApp-React-SpringBoot/blob/main/LabApp%20-Frontend%20(React)/README.md)
 
+# Project Installation and Running 
 Database:
 
         spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.PostgreSQLDialect
