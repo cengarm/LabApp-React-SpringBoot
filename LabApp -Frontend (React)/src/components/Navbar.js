@@ -52,7 +52,7 @@ const Navbar = () => {
         </Link>
        
         <Link 
-        to ="/"
+        to ="/Homepage"
         className="rounded bg-slate-600 hover:bg-slate-950 text-white px-10 py-2 w-15 ml-20 flex font-semibold  ">
           Home Page
           </Link>

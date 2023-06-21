@@ -1,3 +1,38 @@
+.background-image {
+  background-image: url('../public/lab.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  filter: blur(0px);
+}
+.social-icons {
+  position: absolute;
+  bottom: 17px;
+  right: 17px;
+}
+
+.icon {
+  font-size: 96px;
+  margin-left: 0px;
+}
+.centered-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30vh;
+  text-align: center; 
+  text-shadow: 4px 4px 5px rgba(100, 93, 93, 0.9); 
+}
+.centered-textt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 87vh;
+  text-align: center;
+}
 .App {
   text-align: center;
 }
